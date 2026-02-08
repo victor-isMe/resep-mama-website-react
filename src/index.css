@@ -1,0 +1,578 @@
+/* Global Style */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe", sans-serif;
+  background-color: #f9f3e5;
+  color: #5d3a1a;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  min-height: 100vh;
+}
+
+/* Navbar Style */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: #f9f3e5;
+  color: #b3622d;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.logo {
+  margin: 0;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li {
+  cursor: pointer;
+  font-weight: 500;
+}
+.nav-links a {
+  margin-left: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  padding-bottom: 2px;
+
+  transition: all 0.1s ease;
+}
+.nav-links a:hover {
+  border-bottom: 2px solid #b3622d;
+}
+
+/* Recipe Card Style */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+.recipe-card {
+  position: relative;
+  padding-bottom: 48px;
+  background: #eaddca;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+.recipe-card:hover {
+  transform: scale(1.02);
+}
+.recipe-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.recipe-card h3 {
+  margin-top: 0;
+  padding: 12px;
+}
+.recipe-card p {
+  padding: 0 12px 16px;
+  font-size: 14px;
+  color: #5d3a1a;
+}
+.recipe-card .read-more {
+  position: absolute;
+  bottom: 10px;
+  right: 16px;
+  border: 2px solid #b3622d;
+  color: #b3622d;
+  padding: 10px; 
+  border-radius: 50px;
+  max-width: 180px; 
+
+  transition: all 0.2s ease;
+}
+.recipe-card .read-more:hover {
+  color: white;
+  background-color: #b3622d;
+}
+
+/* Home Style */
+.home-layout {
+  display: flex;
+  gap: 32px;
+  padding: 32px;
+}
+.home-main {
+  flex: 3;
+}
+.home-aside {
+  flex: 1;
+  background: #eaddca;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  height: fit-content;
+}
+
+/* Hero Banner Style */
+.hero {
+  padding: 80px 32px;
+  background-image: url('assets/images/banner-hero-v2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #f9f3e5;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+.hero p {
+  font-size: 16px;
+  opacity: 0.95;
+  margin-bottom: 48px;
+}
+.hero a {
+  padding: 12px;
+  background: #b3622d;
+  border-radius: 8px;
+  font-weight: bolder;
+}
+
+/* Resep Page Style */
+.resep-page {
+  padding: 48px 24px;
+}
+.resep-page h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.resep-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+@media (max-width: 900px){
+  .resep-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .resep-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Contact Style */
+.contact-page {
+  text-align: center;
+  padding: 32px;
+}
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+  gap: 10px;
+}
+@media (max-width: 900px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+}
+.contact-form {
+  padding: 32px;
+  background-color: #eaddca;
+  border-radius: 20px;
+}
+.contact-form label {
+  display: block;
+  margin: 0;
+  text-align: left;
+}
+.contact-form input, .contact-form textarea, .login-page input {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  resize: none;
+  padding: 8px;
+  border-radius: 10px;
+  border:2px solid transparent;
+}
+.contact-form input:focus, .contact-form textarea:focus, .login-page form input:focus {
+  outline: none;
+  border: 2px solid #5d3a1a;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+.contact-form button, .login-page form button {
+  border-color: transparent;
+  padding: 8px 24px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #5d3a1a;
+  transition: all 0.2s ease;
+  margin-top: 24px;
+}
+.contact-form button:hover, .login-page form button:hover {
+  color: #eaddca;
+  background-color: #5d3a1a;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 32px;
+}
+.email-info, .telp-info, .map-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 20px;
+  background-color: #eaddca;
+}
+.email-info p, .telp-info p, .map-info p {
+  text-align: left;
+  line-height: 1.5;
+}
+
+/* About Style */
+.about-page {
+  text-align: center;
+  line-height: 0.5;
+}
+.about-wrapper {
+  padding: 48px;
+  margin-top: 16px;
+  line-height: 1;
+  display: flex;
+  gap: 20px;
+}
+.about-wrapper img {
+  border-radius: 10px;
+}
+.content-text {
+  text-align: left;
+}
+
+/* Admin Login Page Style */
+.login-page {
+  text-align: center;
+  padding: 32px;
+}
+.login-page h2 {
+  margin-bottom: 16px;
+}
+.login-page form {
+  margin: 0 auto;
+  padding: 32px;
+  background-color: #eaddca;
+  border-radius: 20px;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+/* Dashboard Admin Style */
+.dashboard-page {
+  padding: 32px;
+  text-align: center;
+}
+.dashboard-page p {
+  margin-bottom: 48px;
+}
+.inbox-btn, .add-recipe-btn {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 8px;
+  background-color: #eaddca;
+  padding: 16px 24px;
+  border-radius: 10px;
+  width: 180px;
+  transition: all 0.2s ease;
+}
+.inbox-btn:hover, .add-recipe-btn:hover {
+  color: #eaddca;
+  background-color: #5d3a1a;
+}
+.dashboard-content {
+  padding: 48px;
+}
+.content-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+@media (max-width: 900px){
+  .content-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.content-grid .resep-wrap {
+  transition: all 0.3s ease;
+}
+.content-grid .resep-wrap:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.06);
+}.content-grid .img-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+.content-grid .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.content-grid .resep-wrap:hover img {
+  transform: scale(1.05);
+}
+.content-grid .btn-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.content-grid .edit-btn {
+  padding: 6px 14px;
+  border: 1px solid #5d3a1a;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+.edit-btn:hover {
+  background-color: green;
+  color: #f9f3e5;
+  border-color: green;
+}
+.content-grid .delete-btn {
+  border:1px solid transparent;
+  border-radius: 8px;
+  padding: 6px 12px;
+  background-color: red;
+  color: #f9f3e5;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+.delete-btn:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  border-color: #eaddca;
+  color: #eaddca;
+}
+.logout-btn {
+  padding: 8px 18px;
+  background-color: #eaddca;
+  border: 1px solid #5d3a1a;
+  color: #5d3a1a;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+.logout-btn:hover {
+  background-color: #5d3a1a;
+  color: white;
+}
+
+/* Create Resep Style */
+.create-resep-page {
+  padding: 32px;
+}
+.create-resep-page h2 {
+  text-align: center;
+  margin: 40px 0;
+}
+.add-resep-container {
+  min-width: 300px;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #eaddca;
+  border-radius: 12px;
+  padding: 24px 48px;
+}
+.add-resep-container input:not(.publish-checkbox), .add-resep-container textarea {
+  width: 100%;
+  resize: none;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 6px;
+  border: 1px solid #5d3a1a;
+  background-color: #f9f3e5;
+  padding: 10px 12px;
+}
+.add-resep-container button {
+  padding: 6px 12px;
+  margin: 10px 0;
+  background-color: white;
+  color: #5d3a1a;
+  border: 1px solid #5d3a1a;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.add-resep-container button:hover {
+  color: white;
+  background-color: #5d3a1a;
+}
+.add-resep-container .save-btn {
+  border: 1px solid blue;
+  color: blue;
+  padding: 6px 16px;
+}
+.add-resep-container .save-btn:hover {
+  background-color: blue;
+}
+
+/* Edit Resep Style */
+.edit-resep-page {
+  padding: 32px;
+}
+.edit-resep-page h2 {
+  text-align: center;
+  margin: 40px 0;
+}
+.edit-resep-container {
+  min-width: 300px;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #eaddca;
+  border-radius: 12px;
+  padding: 24px 48px;
+}
+.edit-resep-container input:not(.publish-checkbox), .edit-resep-container textarea {
+  width: 100%;
+  resize: none;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 6px;
+  border: 1px solid #5d3a1a;
+  background-color: #f9f3e5;
+  padding: 10px 12px;
+}
+.edit-resep-container button {
+  padding: 6px 12px;
+  margin: 10px 0;
+  background-color: white;
+  color: #5d3a1a;
+  border: 1px solid #5d3a1a;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.edit-resep-container button:hover {
+  color: white;
+  background-color: #5d3a1a;
+}
+.edit-resep-container .save-btn {
+  border: 1px solid blue;
+  color: blue;
+  padding: 6px 16px;
+}
+.edit-resep-container .save-btn:hover {
+  background-color: blue;
+}
+
+/* Footer Style */
+footer {
+  border-top: 2px solid #ddd;
+  text-align: center;
+  background: #f9f3e5;
+  color: #b3622d;
+}
+.footer-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  align-items: first baseline;
+  padding: 48px 32px;
+}
+@media (max-width: 900px){
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+footer .desc {
+  text-align: left;
+  padding: 16px 32px;
+  line-height: 1.5;
+}
+footer .nav {
+  text-align: left;
+  padding: 16px 32px;
+}
+footer .nav .navList {
+  list-style: none;
+  padding: 0;
+  line-height: 1.7;
+}
+footer .nav .navList a {
+  transition: all 0.2s ease;
+}
+footer .nav .navList a:hover {
+  color: #5d3a1a;
+}
+footer .contact-us {
+  text-align: left;
+  padding: 16px 32px;
+}
+footer .contact-us p {
+  text-align: justify;
+  line-height: 1.5;
+}
+footer .media-icons {
+  text-align: left;
+  padding: 16px 32px;
+}
+footer .media-icons nav {
+  display: flex;
+  gap: 12px;
+}
+footer .media-icons nav a {
+  padding: 10px;
+  background-color: #ece8e2;
+  border-radius: 20%;
+  font-size: 18px;
+
+  transition: all 0.2s ease;
+}
+footer .media-icons nav a:hover {
+  color: white;
+  background-color: #b3622d;
+}
+footer .desc h3, footer .nav h3, footer .contact-us h3, footer .media-icons h3 {
+  text-align: left;
+}
+footer .footer {
+  padding: 16px;
+  color: #f9f3e5;
+  background: #b3622d;
+}
