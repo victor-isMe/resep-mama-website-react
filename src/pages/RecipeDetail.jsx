@@ -27,12 +27,14 @@ function RecipeDetail() {
 
     return (
         <main style={{padding: "32px"}}>
+            <h2>{recipe.title}</h2>
             {recipe.imageUrl && (
                 <img 
                     src={recipe.imageUrl} 
                     alt={recipe.title}
                     style={{
-                        width: "100%",
+                        width: "400px",
+                        margin: "0 auto",
                         maxHeight: "300px",
                         objectFit: "cover",
                         borderRadius: "8px",
@@ -40,7 +42,6 @@ function RecipeDetail() {
                     }}
                 />
             )}
-            <h2>{recipe.title}</h2>
             <p>{recipe.description}</p>
 
             <p>Waktu Masak: {recipe.cookTime} menit</p>

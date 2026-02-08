@@ -82,7 +82,6 @@ function Contact() {
                         <p>Alamat <br /><b>Ds. Balerejo, Kec. Kebonsari, Kab. Madiun, Prov. Jawa Timur, Indonesia</b></p>
                     </div>
                 </div>
-
             </div>
         </main>
     )

@@ -1,12 +1,25 @@
-import {Link} from 'react-router-dom'
-import Logo from './Logo'
+import { useState } from "react"
+import { Link } from "react-router-dom"
+import Logo from "./Logo"
 
-function Navbar() {
+const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false)
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen)
+    }
+
     return (
         <nav className="navbar">
             <Logo size={36} />
 
-            <ul className="nav-links">
+            <div className={`hamburger ${isOpen ? 'open':''}`} onClick={toggleMenu}>
+                <span className="bar"></span>
+                <span className="bar"></span>
+                <span className="bar"></span>
+            </div>
+
+            <ul className={`nav-links ${isOpen ? 'open':''}`}>
                 <li>
                     <Link to='/'>Home</Link>
                 </li>
