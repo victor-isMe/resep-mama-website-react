@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { getAllRecipes } from '../services/recipeService'
 import Hero from '../components/home/Hero'
 import HomeAside from '../components/home/HomeAside'
+import RecipeSlider from '../components/home/RecipeSlider'
 
 function Home() {
     const [recipes, setRecipes] = useState([])

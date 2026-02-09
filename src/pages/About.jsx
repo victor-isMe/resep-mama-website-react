@@ -12,12 +12,11 @@ function About() {
                     <h2>Resep Mama</h2>
                     <p>
                         Berawal dari kecintaan pada masakan rumahan, Resep Mama dibuat 
-                        untuk menjadi tempat untuk berbagai ide dan inspirasi memasak.
-                    </p>
-                    <p>
+                        untuk menjadi tempat untuk berbagai ide dan inspirasi memasak. 
                         Kami memahami bahwa setiap orang memiliki kenangan indah tentang makanan 
                         dari rumah. Karena itu, kami ingin menghadirkan kembali rasa hangat tersebut 
-                        melalui resep-resep yang sederhana namun istimewa.                    </p>
+                        melalui resep-resep yang sederhana namun istimewa.
+                    </p>
                     <p>
                         Platform ini akan terus berkembang dengan berbagai resep baru yang 
                         dikelola langsung oleh admin kami untuk memastikan kualitas dan kelezatan 

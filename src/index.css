@@ -158,6 +158,11 @@ main {
   gap: 32px;
   padding: 32px;
 }
+@media (max-width: 768px) {
+  .home-layout {
+    flex-direction: column;
+  }
+}
 .home-main {
   flex: 3;
 }
