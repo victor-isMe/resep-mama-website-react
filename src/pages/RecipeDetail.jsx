@@ -26,16 +26,14 @@ function RecipeDetail() {
     }
 
     return (
-        <main style={{padding: "32px"}}>
+        <main className="recipe-detail-page" style={{padding: "32px"}}>
             <h2>{recipe.title}</h2>
             {recipe.imageUrl && (
                 <img 
                     src={recipe.imageUrl} 
                     alt={recipe.title}
                     style={{
-                        width: "400px",
                         margin: "0 auto",
-                        maxHeight: "300px",
                         objectFit: "cover",
                         borderRadius: "8px",
                         marginBottom: "16px"
