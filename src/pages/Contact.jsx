@@ -60,6 +60,7 @@ function Contact() {
                     <textarea 
                         placeholder="Tulis pesan anda"
                         value={message}
+                        rows="6"
                         onChange={(e) => setMessage(e.target.value)}
                         required
                     />

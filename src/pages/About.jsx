@@ -11,20 +11,26 @@ function About() {
                 <div className="content-text">
                     <h2>Resep Mama</h2>
                     <p>
-                        Lorem ipsum dolor sit amet 
-                        consectetur adipisicing elit. 
-                        Itaque quas accusamus incidunt 
-                        praesentium debitis ducimus minima 
-                        possimus voluptatum eius. Aliquid 
-                        velit blanditiis necessitatibus odit 
-                        adipisci vitae aut earum. Vero, velit?
+                        Berawal dari kecintaan pada masakan rumahan, Resep Mama dibuat 
+                        untuk menjadi tempat untuk berbagai ide dan inspirasi memasak.
+                    </p>
+                    <p>
+                        Kami memahami bahwa setiap orang memiliki kenangan indah tentang makanan 
+                        dari rumah. Karena itu, kami ingin menghadirkan kembali rasa hangat tersebut 
+                        melalui resep-resep yang sederhana namun istimewa.                    </p>
+                    <p>
+                        Platform ini akan terus berkembang dengan berbagai resep baru yang 
+                        dikelola langsung oleh admin kami untuk memastikan kualitas dan kelezatan 
+                        setiap hidangan.
                     </p>
 
                     <h4>Tips Mama</h4>
                     <ul>
-                        <li>Blablabla one</li>
-                        <li>Blablabla two</li>
-                        <li>Blablabla three</li>
+                        <li>Gunakan bahan segar</li>
+                        <li>Baca resep sampai selesai</li>
+                        <li>Siapkan semua bahan terlebih dahulu</li>
+                        <li>Cicipi sebelum disajikan</li>
+                        <li>Masak dengan sabar dan sepenuh hati</li>
                     </ul>
                 </div>
             </div>

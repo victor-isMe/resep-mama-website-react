@@ -1,6 +1,7 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import Logo from "./Logo"
+import { useLocation } from "react-router-dom"
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -8,6 +9,12 @@ const Navbar = () => {
     const toggleMenu = () => {
         setIsOpen(!isOpen)
     }
+
+    const location = useLocation()
+
+    useEffect(() => {
+        setIsOpen(false)
+    }, [location.pathname])
 
     return (
         <nav className="navbar">
