@@ -210,6 +210,26 @@ main {
   letter-spacing: 1px;
 }
 
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 32px auto;
+}
+.search-wrapper input {
+  width: 100%;
+  padding: 8px 6px 8px 24px;
+  border:1px solid #b3622d;
+  border-radius: 12px;
+}
+.search-wrapper .search-icon {
+  position: absolute;
+  left: 6.5px;
+  top: 50%;
+  color: #b3622d;
+  transform: translateY(-50%);
+}
+
 .resep-grid {
   max-width: 1100px;
   margin: 0 auto;

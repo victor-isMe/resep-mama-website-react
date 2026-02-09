@@ -2,9 +2,12 @@ import { useEffect, useState } from "react"
 import { collection, query, orderBy, getDocs } from "firebase/firestore"
 import { db } from "../services/firebase"
 import RecipeCard from "../components/recipe/RecipeCard"
+import { FaSearch } from "react-icons/fa"
 
 function Recipes() {
     const [recipes, setRecipes] = useState([])
+    
+    const [search, setSearch] = useState("")
 
     useEffect(() => {
         fetchRecipes()
@@ -28,14 +31,27 @@ function Recipes() {
         setRecipes(published)
     }
 
+    const filteredRecipes = recipes.filter((recipe) => `${recipe.title} ${recipe.description}`.toLowerCase().includes(search.toLowerCase()))
+
     return (
         <main className="resep-page">
             <h2>Semua Resep</h2>
 
-            <section className="resep-grid">
-                {recipes.length === 0 && <p>Belum ada resep</p>}
+            <div className="search-wrapper">
+                <FaSearch className="search-icon"/>
+                <input 
+                    type="text" 
+                    placeholder="Temukan resep pilihan anda"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                />
+            </div>
 
-                {recipes.map((recipe) => (
+            <section className="resep-grid">
+                {filteredRecipes.length === 0 && <p>Resep tidak ditemukan</p>}
+
+
+                {filteredRecipes.map((recipe) => (
                     <RecipeCard 
                         key={recipe.id}
                         id={recipe.id}

@@ -26,7 +26,7 @@ function HomeAside() {
 
     return (
         <aside style={{ padding: "16px" }}>
-            <h3>Artikel Terbaru</h3>
+            <h3>Resep Terbaru</h3>
             <ol>
                 {recipes.map(recipe => (
                     <li key={recipe.id}>
