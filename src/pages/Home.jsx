@@ -33,18 +33,10 @@ function Home() {
 
             <section className="home-layout">
                 <div className="home-main">
-                    <div className="recipe-grid">
+                    <div className="home-slider">
                         {recipes.length === 0 && <p>Belum ada resep</p>}
             
-                        {recipes.map((recipe) => (
-                            <RecipeCard
-                                key={recipe.id}
-                                id={recipe.id}
-                                title={recipe.title}
-                                description={recipe.description}
-                                imageUrl={recipe.imageUrl}
-                            />
-                        ))}
+                        <RecipeSlider recipes={recipes}/>
                     </div>
                 </div>
 

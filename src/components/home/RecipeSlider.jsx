@@ -7,10 +7,11 @@ import 'swiper/css/navigation'
 function RecipeSlider({ recipes }) {
     return (
         <Swiper
+            className='swiper'
             modules={[Navigation, Autoplay]}
             autoplay={{ delay: 3000, disableOnInteraction: false, }}
             navigation
-            spaceBetween={20}
+            spaceBetween={40}
             breakpoints={{
                 320: { slidesPerView: 1 },
                 640: { slidesPerView: 2 },

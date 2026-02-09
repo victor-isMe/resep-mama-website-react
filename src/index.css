@@ -166,6 +166,22 @@ main {
 .home-main {
   flex: 3;
 }
+.home-slider {
+  width: 100%;
+  max-width: 900px;
+}
+.swiper {
+  padding: 0 40px !important;
+}
+.swiper-button-prev, .swiper-button-next {
+  color: #b3622d !important;
+  padding: 6px;
+  background: #f9f3e5;
+  width: 35px !important;
+  height: 35px !important;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
 .home-aside {
   flex: 1;
   background: #eaddca;
