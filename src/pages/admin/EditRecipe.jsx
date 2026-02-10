@@ -17,6 +17,14 @@ function EditRecipe() {
     const [imageUrl, setImageUrl] = useState("")
     const [isPublished, setIsPublished] = useState(false)
 
+    const handleAddIngredients = () => {
+        setIngredients([...ingredients, ""])
+    }
+
+    const handleAddSteps = () => {
+        setSteps([...steps, ""])
+    }
+
     useEffect(() => {
         fetchRecipe()
     }, [])
@@ -113,6 +121,7 @@ function EditRecipe() {
                             type="text" 
                             key={index}
                             value={item}
+                            placeholder={`Bahan ${index+1}`}
                             onChange={(e) => {
                                 const newItems = [...ingredients]
                                 newItems[index] = e.target.value
@@ -120,6 +129,9 @@ function EditRecipe() {
                             }}
                         />
                     ))}
+                    <button type="button" onClick={handleAddIngredients}>
+                        + Tambah Bahan
+                    </button>
                     <br /><br />
 
                     <h3>Langkah-langkah</h3>
@@ -127,6 +139,7 @@ function EditRecipe() {
                         <textarea 
                             key={index}
                             value={step}
+                            placeholder={`Langkah ${index+1}`}
                             onChange={(e) => {
                                 const newSteps = [...steps]
                                 newSteps[index] = e.target.value
@@ -134,6 +147,9 @@ function EditRecipe() {
                             }}
                         />
                     ))}
+                    <button type="button" onClick={handleAddSteps}>
+                        + Tambah Langkah
+                    </button>
                     <br /><br />
 
                     <h3>URL Gambar</h3>

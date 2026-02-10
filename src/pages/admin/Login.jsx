@@ -24,6 +24,8 @@ function Login() {
             <h2>Admin Login</h2>
 
             <form onSubmit={handleLogin}>
+            
+                <label>Email:</label>
                 <input 
                     type="email"
                     placeholder="Enter admin email"
@@ -31,8 +33,9 @@ function Login() {
                     onChange={(e) => setEmail(e.target.value)}
                 />
 
-                <br /><br />
+                <br /><br /><br />
 
+                <label>Password:</label>
                 <input 
                     type="password" 
                     placeholder="Enter password"

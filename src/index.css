@@ -404,11 +404,15 @@ main {
 }
 .login-page form {
   margin: 0 auto;
-  padding: 32px;
+  padding: 48px 32px;
   background-color: #eaddca;
   border-radius: 20px;
   min-width: 300px;
   max-width: 500px;
+}
+.login-page form label {
+  display: block;
+  text-align: left;
 }
 
 /* Dashboard Admin Style */
