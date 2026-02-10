@@ -2,7 +2,7 @@ function About() {
     return (
         <main className="about-page" style={{padding: "32px"}}>
             <h2>Tentang Resep Mama</h2>
-            <p>
+            <p style={{ lineHeight: "1" }}>
                 Website ini berisi resep rumahan yang diwariskan turun-temurun
             </p>
 
