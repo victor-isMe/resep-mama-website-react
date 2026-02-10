@@ -382,6 +382,7 @@ main {
 }
 .content-text p {
   text-indent: 30px;
+  text-align: justify;
 }
 @media (max-width: 768px) {
   .about-wrapper {
