@@ -242,6 +242,7 @@ main {
   padding: 8px 6px 8px 24px;
   border:1px solid #b3622d;
   border-radius: 12px;
+  color: #5d3a1a;
 }
 .search-wrapper .search-icon {
   position: absolute;

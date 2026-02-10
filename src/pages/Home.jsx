@@ -12,9 +12,11 @@ function Home() {
     useEffect(() => {
         const fetchRecipes = async () => {
             const data = await getAllRecipes()
-            const publishedRecipes = data.filter(
-                (recipe) => recipe.isPublished === true
-            )
+            
+            const publishedRecipes = data
+                .filter((recipe) => recipe.isPublished === true)
+                .sort((a, b) => b.createdAt - a.createdAt)
+                .slice(0, 6)
             setRecipes(publishedRecipes)
             setLoading(false)
         }
