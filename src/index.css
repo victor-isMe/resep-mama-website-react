@@ -371,6 +371,8 @@ main {
   gap: 20px;
 }
 .about-wrapper img {
+  object-fit: cover;
+  object-position: 26%;
   border-radius: 10px;
   width: 300px;
   height: 400px;

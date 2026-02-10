@@ -7,7 +7,7 @@ function About() {
             </p>
 
             <div className="about-wrapper">
-                <img src="https://picsum.photos/200/300" alt="Resep Mama Image" />
+                <img src="../src/assets/images/about-image.png" alt="Resep Mama Image" />
                 <div className="content-text">
                     <h2>Resep Mama</h2>
                     <p>
