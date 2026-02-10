@@ -77,6 +77,7 @@ function CreateRecipe() {
                     <textarea 
                         placeholder="Deskripsi"
                         value={description}
+                        rows="6"
                         onChange={(e) => setDescription(e.target.value)}
                     />
                     <br />
@@ -124,6 +125,7 @@ function CreateRecipe() {
                             key={index}
                             placeholder={`Langkah ${index+1}`}
                             value={step}
+                            rows={3}
                             onChange={(e) => {
                                 const newSteps = [...steps]
                                 newSteps[index] = e.target.value

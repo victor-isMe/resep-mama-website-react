@@ -96,6 +96,7 @@ function EditRecipe() {
                     <h3>Deskripsi</h3>
                     <textarea 
                         value={description}
+                        rows="6"
                         onChange={(e) => setDescription(e.target.value)}
                     />
                     <br /><br />
@@ -141,6 +142,7 @@ function EditRecipe() {
                             key={index}
                             value={step}
                             placeholder={`Langkah ${index+1}`}
+                            rows={3}
                             onChange={(e) => {
                                 const newSteps = [...steps]
                                 newSteps[index] = e.target.value
