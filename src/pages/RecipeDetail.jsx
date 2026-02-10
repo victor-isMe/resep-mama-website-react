@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { getRecipeById } from "../services/recipeService"
+import { formatDate } from "../utils/formatDate"
 
 function RecipeDetail() {
     const {id} = useParams()
@@ -40,6 +41,11 @@ function RecipeDetail() {
                     }}
                 />
             )}
+            <p>Dipublikasikan: {formatDate(recipe.createdAt)}</p>
+            {recipe.updatedAt && (
+                <p>Diperbarui: {formatDate(recipe.updatedAt)}</p>
+            )}
+            <br />
             <p>{recipe.description}</p>
 
             <p>Waktu Masak: {recipe.cookTime} menit</p>

@@ -275,6 +275,10 @@ main {
   width: 400px;
   height: 300px;
 }
+.recipe-detail-page p {
+  text-align: justify;
+  line-height: 1.3;
+}
 @media (max-width: 768px) {
   .recipe-detail-page img {
     width: 100%;

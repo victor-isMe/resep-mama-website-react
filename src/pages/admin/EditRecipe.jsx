@@ -57,7 +57,8 @@ function EditRecipe() {
             ingredients,
             steps,
             imageUrl,
-            isPublished
+            isPublished,
+            updatedAt: new Date(),
         })
 
         navigate('/admin')
