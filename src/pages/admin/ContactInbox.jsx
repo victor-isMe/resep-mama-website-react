@@ -47,7 +47,7 @@ function ContactInbox() {
             {messages.map((msg) => (
                 <div key={msg.id} style={{ borderBottom: "1px solid #ccc" }}>
                     <p><b>{msg.name}</b> ({msg.email})</p>
-                    <small>{formatDateInbox(msg.createdAt)}</small>
+                    <small>{formatDateInbox(msg.createdAt)} WIB</small>
                     <p>{msg.message}</p>
                 </div>
             ))}
