@@ -1,5 +1,6 @@
-import { useState } from "react"
-import {signInWithEmailAndPassword} from "firebase/auth"
+import { useState, useEffect } from "react"
+import { signInWithEmailAndPassword } from "firebase/auth"
+import { onAuthStateChanged } from "firebase/auth"
 import { auth } from "../../services/firebase"
 import { useNavigate  } from "react-router-dom"
 
@@ -18,6 +19,16 @@ function Login() {
             alert("Login gagal")
         }
     }
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                navigate('/admin')
+            }
+        })
+
+        return () => unsubscribe()
+    }, [navigate])
 
     return (
         <main className="login-page">

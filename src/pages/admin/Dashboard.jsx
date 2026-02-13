@@ -1,4 +1,3 @@
-import { signOut } from 'firebase/auth'
 import { auth } from '../../services/firebase'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
@@ -34,11 +33,6 @@ function Dashboard() {
         
         await deleteDoc(doc(db, "recipes", id))
         fetchRecipes()
-    }
-
-    const handleLogout = async () => {
-        await signOut(auth)
-        navigate('/')
     }
 
     return (
@@ -86,8 +80,6 @@ function Dashboard() {
                 </div>
             </div>
             <br /><br />
-
-            <button className='logout-btn' onClick={handleLogout}>Logout</button>
         </main>
     )
 }

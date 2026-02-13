@@ -95,12 +95,62 @@ main {
     overflow: hidden;
   }
   .nav-links.open {
-    max-height: 300px;
+    max-height: 350px;
     padding: 1rem 0;
   }
   .nav-links li {
-    padding: 1rem 0;
+    padding: 0.8rem 0;
   }
+}
+/* Admin Navbar Style */
+.admin-nav {
+  display: flex;
+  gap: 10px;
+}
+.arrow {
+  cursor: pointer;
+  transform: rotate(90deg);
+  font-weight: bolder;
+  transition: all 0.2s ease;
+}
+.arrow.open {
+  transform: rotate(-90deg);
+  transition: all 0.2s ease;
+}
+.admin-links {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  flex-direction: column;
+  background-color: #f9f3e5;
+  width: 25%;
+  text-align: center;
+  transition: 0.3s;
+  max-height: 0;
+  overflow: hidden;
+}
+.admin-links.open {
+  max-height: 100px;
+  padding: 1rem 0;
+  border: 1px solid #ddd;
+}
+.logout-btn {
+  padding: 8px 18px;
+  background-color: #eaddca;
+  border: 1px solid #5d3a1a;
+  color: #5d3a1a;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+.logout-btn:hover {
+  background-color: #5d3a1a;
+  color: white;
 }
 
 /* Recipe Card Style */
@@ -515,19 +565,6 @@ main {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   border-color: #eaddca;
   color: #eaddca;
-}
-.logout-btn {
-  padding: 8px 18px;
-  background-color: #eaddca;
-  border: 1px solid #5d3a1a;
-  color: #5d3a1a;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-}
-.logout-btn:hover {
-  background-color: #5d3a1a;
-  color: white;
 }
 
 /* Create Resep Style */
